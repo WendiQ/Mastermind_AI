@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<title>Mastermind AI Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1126808302%2F960x0.jpg%3Ffit%3Dscale");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+/* Format social media icon color */
+.fa-facebook-official {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+<body>
+
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">MASTERMIND AI</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">  
+      <a href="#workshops" class="w3-bar-item w3-button"><i class="fa fa-mortar-board" style="font-size:18px"></i> WORKSHOPS</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#testimonials" class="w3-bar-item w3-button"><i class="fa fa-briefcase" style="font-size:16px"></i> TESTIMONIALS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#testimonials" onclick="w3_close()" class="w3-bar-item w3-button">TESTIMONIALS</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#workshops" onclick="w3_close()" class="w3-bar-item w3-button">WORKSHOPS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Mastermind AI Academy</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Mastermind AI Academy</span><br>
+    <span class="w3-large">Transform your career or business with Artificial Intelligence.</span>
+    <p><a href="#contact" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get your promo code to our next workshop!</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <a href="https://www.facebook.com/artificial.intelligence.MastermindAI/" target="_blank" class="fa fa-facebook-official w3-hover-opacity"></a>
+    <a href="https://www.instagram.com/mastermindai_/" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
+    <a href="https://www.linkedin.com/company/mastermindai-academy/" target="_blank" class="fa fa-linkedin w3-hover-opacity"></a>
+  </div>
+</header>
+
+<!-- Workshop Features Section -->
+<div class="w3-container" style="padding:128px 16px" id="workshops">
+  <h3 class="w3-center">OUR WORKSHOPS</h3>
+  <p class="w3-center w3-large">Key features of our workshops</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-lightbulb-o w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Expertise</p>
+      <p>Learn directly from AI industry experts who offer essential skills, latest trends, and valuable insights. Take advantage of their experiences and apply AI techniques to boost your organization or facilitate your career switch.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-keyboard-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Hands-on Learning</p>
+      <p>Get your hands dirty with all the codings! Step-by-step guide for building, training, validating, and testing simple Machine Learning models or Neural Networks to solve real-world problems with real-world datasets.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Networking</p>
+      <p>Take advantage of our 30-min networking sessions and get to know others in the industry! Connect with like-minded people - be it someone in business or someone who is passionate about diving deep into Machine Learning algorithms. This is a great way to grow your network.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-briefcase w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Corporate training</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<!-- "You'll walk away with..." Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <h3 class="w3-center">You'll Walk away with...</h3>
+  <div class="w3-row-padding" style="margin-top:64px">
+  <font size="4">
+  <h4>Theory:</h4>
+    <ol type="1">
+      <li>What is AI? What is Machine learning? What are Neural Networks?</li>
+      <li>How can I build and train different Machine Learning Models and Neural Networks?</li>
+      <li>What are different Machine Learning techniques used in the industry, and how can I apply them to help <b>MY COMPANY?</b></li>
+    </ol>
+  <h4>Practice:</h4>
+    <ol type="1">
+      <li>The ability to build Machine Learning models and Neural Networks, train models using different datasets, and solve problems such as predicting university admissions.</li>
+      <li>Lead your business and make data-informed decisions by integrating AI to enhance performance, efficiency, and future practices.</li>
+    </ol>
+    </font>
+    <br>
+    <p><a href="#testimonials" class="w3-button w3-black"><i class="fa fa-th"> </i> View Testimonials</a></p>
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="past_workshops">
+  <h3 class="w3-center">PAST WORKSHOPS</h3>
+  <p class="w3-center w3-large">Check out our past workshops!</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m6">
+      <img src="https://media.licdn.com/dms/image/C5622AQHknntu4RWx4A/feedshare-shrink_8192/0?e=1573689600&v=beta&t=h0ChXJrtlmKo8lOKCNS0brvMdIg6SZtJMghSwOgCw2Y" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="workshop 1">
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="https://media.licdn.com/dms/image/C5622AQHY-QnHshII4A/feedshare-shrink_8192/0?e=1573689600&v=beta&t=qrsokzmhCd076zp9i9F1en9fuWgw0LgCjKnznWc4uIc" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="workshop 2">
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="https://media.licdn.com/dms/image/C4D22AQHBy4yDECprgw/feedshare-shrink_8192/0?e=1573689600&v=beta&t=yx6d4omU1M3JZ4DJLeclYrj1kQToQ6jQ7-BUiSLJ4Wk" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="workshop 3">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<div id="modal02" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img02" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<div id="modal03" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img03" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Testimonial Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="testimonials">
+  <h3 class="w3-center">TESTIMONIALS</h3>
+  <p class="w3-center w3-large">See what our participants say about the workshops!</p>
+  <div class="w3-col l6 m12 w3-center">
+    <video src="Testimonial_1.MOV" controls width="360" height="640"> </video>
+  </div>
+  <div class="w3-col l6 m12 w3-center">
+    <video src="Testimonial_2.MOV" controls width="360" height="640"> </video>
+  </div>
+</div>  
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">Get to know our amazing team members!</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/c7b0bc5f-b924-4049-bc9c-9e052efaeb03.png" alt="Ardalan", class="center" style="width: 80%">
+        <div class="w3-container">
+          <h3>Ardalan Benam</h3>
+          <p class="w3-opacity">CEO, Co-Founder & Instructor</p>
+          <font size="4">
+          <p>Ardalan is an AI scientist at Flybits. He has applied AI and Machine learning to a wide range of problems while helping big financial institutes like Mastercard and TD through his career. In his previous startup, he built a conversational AI system for telephone systems. Ardalan has been teaching Machine Learning since he was a graduate student.</p>
+          </font>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/c4fafe1e-8e76-485c-a5dd-88413253d3f1.png" alt="Hamidreza" class="center" style="width:78%">
+        <div class="w3-container">
+          <h3>Hamidreza Mahyar</h3>
+          <p class="w3-opacity">Co-Founder & Instructor</p>
+          <p>Hamidreza is Co-founder & CEO at Assister.Ai, an AI-powered conversational AI assistant. He received his Ph.D. degree in Computer Engineering at Sharif University of Technology in 2017. Hamidreza had been a research scholar at Boston University, MPI-SWS, and TU Wien, working on Machine Learning over Graphs. In addition to his research experience, he has also eleven years of experience in teaching Machine Learning and AI-related courses. Hamidreza is the former Director of Artificial Intelligence and Big Data Analytics team at Mahan Airline.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/0153cd96-ec08-4106-b818-263643c5ef6c.png" alt="Olivia" style="width:80%" class="center">
+        <div class="w3-container">
+          <h3>Olivia Kim</h3>
+          <p class="w3-opacity">Marketing Associate</p>
+          <font size="4">
+            <p>Olivia is graduating from the University of Toronto with a Bachelor of Arts & Science with Statistics and Economics major. She interned at the employment centre The Centre for Education & Training as a marketing and outreach assistant this past summer. She is currently working as a mentor for first year Statistic students at the Univerisity of Toronto.</p>
+          </font>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/f2c72ba0-dc8b-433a-b4aa-6c5c83f00f71.png" alt="Wendi" style="width:80%" class="center">
+        <div class="w3-container">
+          <h3>Wendi Qu</h3>
+          <p class="w3-opacity">Technical Lead</p>
+          <font size="4">
+            <p>Wendi is graduating from the University of Toronto with a BSc with Statistics and Molecular Genetics Majors. She was a research student at Toronto General Hospital and later at Dr. Tyrrell's Machine Learning lab at U of T. She interned at a Portuguese company comOn this past summer and developed 4 recommendation systems for their dating app.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          </font>
+        </div>
+      </div>
+    </div>
+
+<div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/a56072a4-d0ff-4768-b0a5-65df0f64fa92.png" alt="Lindsay" style="width:80%" class="center">
+        <div class="w3-container">
+          <h3>Lindsay Shen</h3>
+          <p class="w3-opacity">Marketing Associate</p>
+          <font size="4">
+            <p>Lindsay is graduating from the University of Toronto with Bachelor of Commerce, specializing in Finance and Economics. She is the co-founder of a student club called iCAN UofT and is dedicated to assisting international students to better integrate themselves into the Canadian culture by enhancing cross-cultural communication skills.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          </font>
+        </div>
+      </div>
+    </div>
+
+<div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://eep.io/mc-gallery/251f8be0c7b06288c2182f39e/images/42994816-e161-4a6e-82c8-81d6230cc94b.png" alt="Derrick" style="width:80%" class="center">
+        <div class="w3-container">
+          <h3>Derrick Ye</h3>
+          <p class="w3-opacity">Public Relation</p>
+          <font size="4">
+            <p>Derrick is graduating from the University of Toronto with Bachelor of Science, specializing in Statistics. He has a solid foundation in statistics, math and computer science. Over the past summer, he did an internship at the Commercial Bank of China as a data analyst. He is currently preparing for the future graduate school study in doing data science.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          </font>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" 
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+--> 
+
+
+<!-- Skills Section 
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Skills.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Interested? Subscribe to us below!</p>
+  <div style="margin-top:48px">
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+    <form action="https://gmail.us4.list-manage.com/subscribe/post?u=251f8be0c7b06288c2182f39e&amp;id=a7dc3807bf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+      
+    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+    <div class="mc-field-group">
+      <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+    </label>
+      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    </div>
+    <div class="mc-field-group">
+      <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+    </label>
+      <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+    </div>
+    <div class="mc-field-group">
+      <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+    </label>
+      <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+    </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_251f8be0c7b06288c2182f39e_a7dc3807bf" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+    <!-- Company contact info -->
+    <p class="w3-large"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Toronto, ON, Canada</p>
+    <p class="w3-large"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (647) 493-7153</p>
+    <p class="w3-large"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mastermindaiacademy@gmail.com</p>
+
+    <!-- Image of location/map 
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> 
+  -->
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
